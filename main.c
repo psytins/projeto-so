@@ -46,14 +46,42 @@ float gerarPontoAleatorio(){
     return calisto;
 }
 
+int verificarDistancia(float x, float y){
+    if((x*x) + (y*y) < 1){
+        return 1;
+    }
+    return 0;
+}
+
 
 int main(){
-    float pontoRandom;
-    while(1){
-        pontoRandom = gerarPontoAleatorio();
-        printf("%f\n", pontoRandom);  
+    float pontoRandomX;
+    float pontoRandomY;
+    int dentroCirculo; //bool
+    float contarPontos;
+    float pontosTotails;
+    float pi;
+    contarPontos = 0.0;
+    pontosTotails = 10000000.0;
+    for(int cnt = 0; cnt < pontosTotails; cnt++){
+        pontoRandomX = gerarPontoAleatorio();
+        pontoRandomY = gerarPontoAleatorio();
+        //printf("X: %f\n",pontoRandomX);
+        //printf("Y: %f\n",pontoRandomY);
+        dentroCirculo = verificarDistancia(pontoRandomX,pontoRandomY);
+        if(dentroCirculo){
+            contarPontos += 1;
+        }        
+        //printf("\n");
     }
-    
+    pi = (contarPontos/pontosTotails) * 4.0;
+    printf("\n%f\n",pi);
+    //Verificar
+
+
+
+
+
     return 0;
 }
 
