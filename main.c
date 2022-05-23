@@ -14,7 +14,7 @@ Passos:
         - 1.000.000 pontos aleatórios utilizando 6 threads
         - 10.000.000 pontos aleatórios utilizando 8 threads
     
-    - Contabilizar o tempo que demora cada estimaç˜ao do valor de PI e medir a qualidade de cada estimativa.
+    - Contabilizar o tempo_passado que demora cada estimaç˜ao do valor de PI e medir a qualidade de cada estimativa.
 
 Ter em conta:
     - Aq = 4r^2
@@ -55,6 +55,8 @@ int verificarDistancia(float x, float y){
 
 
 int main(){
+    clock_t tempo_passado_inicial;
+    double tempo_passado;
     float pontoRandomX;
     float pontoRandomY;
     int dentroCirculo; //bool
@@ -62,7 +64,8 @@ int main(){
     float pontosTotails;
     float pi;
     contarPontos = 0.0;
-    pontosTotails = 10000000.0;
+    pontosTotails = 1.0;
+    tempo_passado_inicial = clock();
     for(int cnt = 0; cnt < pontosTotails; cnt++){
         pontoRandomX = gerarPontoAleatorio();
         pontoRandomY = gerarPontoAleatorio();
@@ -73,9 +76,12 @@ int main(){
             contarPontos += 1;
         }        
         //printf("\n");
+        //Contar tempo_passado
+        tempo_passado = (double)(clock() - tempo_passado_inicial) / CLOCKS_PER_SEC;
     }
     pi = (contarPontos/pontosTotails) * 4.0;
     printf("\n%f\n",pi);
+    printf("tempo_passado Passado: %f segundos\n",tempo_passado);
     //Verificar
 
 
