@@ -40,9 +40,9 @@ Ter em conta:
 
 float gerarPontoAleatorio(){
     
-    //srand(time(NULL));
-    float num = (rand() % 1000000);
-    float calisto =  (num / 500000) - 1;
+    //srand(time(NULL)); meter a seed em miliseconds
+    float num = (rand() % 200);
+    float calisto =  (num / 100) - 1;
     return calisto;
 }
 
@@ -64,7 +64,7 @@ int main(){
     float pontosTotails;
     float pi;
     contarPontos = 0.0;
-    pontosTotails = 1.0;
+    pontosTotails = 10000.0;
     tempo_passado_inicial = clock();
     for(int cnt = 0; cnt < pontosTotails; cnt++){
         pontoRandomX = gerarPontoAleatorio();
