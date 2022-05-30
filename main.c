@@ -34,15 +34,15 @@ Ter em conta:
 #include <stdlib.h>
 
 //Global
-#define RAIO 1
+//#define RAIO 1
 
 // x^2 + y^2 > 1
 
 float gerarPontoAleatorio(){
     
     //srand(time(NULL)); meter a seed em miliseconds
-    float num = (rand() % 200);
-    float calisto =  (num / 100) - 1;
+    float num = (rand() % 20001);
+    float calisto =  (num / 10000) - 1;
     return calisto;
 }
 
@@ -51,6 +51,26 @@ int verificarDistancia(float x, float y){
         return 1;
     }
     return 0;
+}
+
+/* 
+ * Calcular quantos pontos estão dento do cirulo.
+ * args = o numero de pontos que cada thread them de gerar.
+ */
+void* calcular_pontos(void* args){
+    float pontoRandomX;
+    float pontoRandomY;
+    int dentroCirculo;
+    float contarPontos;
+    for(int i = 20000; i < 20000; i++){
+        pontoRandomX = gerarPontoAleatorio();
+        pontoRandomY = gerarPontoAleatorio();
+        if(verificarDistancia(pontoRandomX,pontoRandomY)){
+            contarPontos += 1;
+        }  
+    }
+    *(float*) args = contarPontos;
+    return args;
 }
 
 
@@ -66,6 +86,7 @@ int main(){
     contarPontos = 0.0;
     pontosTotails = 10000.0;
     tempo_passado_inicial = clock();
+    /*
     for(int cnt = 0; cnt < pontosTotails; cnt++){
         pontoRandomX = gerarPontoAleatorio();
         pontoRandomY = gerarPontoAleatorio();
@@ -75,10 +96,10 @@ int main(){
         if(dentroCirculo){
             contarPontos += 1;
         }        
-        //printf("\n");
+        printf("\n");
         //Contar tempo_passado
-        tempo_passado = (double)(clock() - tempo_passado_inicial) / CLOCKS_PER_SEC;
-    }
+        /tempo_passado = (double)(clock() - tempo_passado_inicial) / CLOCKS_PER_SEC;
+    }*/
     pi = (contarPontos/pontosTotails) * 4.0;
     printf("\n%f\n",pi);
     printf("tempo_passado Passado: %f segundos\n",tempo_passado);
