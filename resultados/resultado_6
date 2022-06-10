@@ -1,0 +1,120 @@
+
+####### Para 20000 Pontos #######
+Para 2 Threads:
+
+Valor pi calculado: 3.141480
+Erro percentual: 0.003590%
+Tempo passado: 0.020896 segundos
+
+Para 4 Threads:
+
+Valor pi calculado: 3.139320
+Erro percentual: 0.072339%
+Tempo passado: 0.025329 segundos
+
+Para 6 Threads:
+
+Valor pi calculado: 3.144500
+Erro percentual: 0.092541%
+Tempo passado: 0.022827 segundos
+
+Para 8 Threads:
+
+Valor pi calculado: 3.140720
+Erro percentual: 0.027784%
+Tempo passado: 0.034762 segundos
+
+### Media ###
+Media calculada: 3.141505
+Erro da media: 0.002800%
+
+####### Para 100000 Pontos #######
+Para 2 Threads:
+
+Valor pi calculado: 3.144304
+Erro percentual: 0.086303%
+Tempo passado: 0.056309 segundos
+
+Para 4 Threads:
+
+Valor pi calculado: 3.142212
+Erro percentual: 0.019716%
+Tempo passado: 0.127128 segundos
+
+Para 6 Threads:
+
+Valor pi calculado: 3.143940
+Erro percentual: 0.074715%
+Tempo passado: 0.093689 segundos
+
+Para 8 Threads:
+
+Valor pi calculado: 3.143308
+Erro percentual: 0.054604%
+Tempo passado: 0.104016 segundos
+
+### Media ###
+Media calculada: 3.143441
+Erro da media: 0.058838%
+
+####### Para 1000000 Pontos #######
+Para 2 Threads:
+
+Valor pi calculado: 3.141231
+Erro percentual: 0.011513%
+Tempo passado: 0.696913 segundos
+
+Para 4 Threads:
+
+Valor pi calculado: 3.142153
+Erro percentual: 0.017827%
+Tempo passado: 0.606915 segundos
+
+Para 6 Threads:
+
+Valor pi calculado: 3.142102
+Erro percentual: 0.016195%
+Tempo passado: 0.913105 segundos
+
+Para 8 Threads:
+
+Valor pi calculado: 3.140949
+Erro percentual: 0.020506%
+Tempo passado: 0.958359 segundos
+
+### Media ###
+Media calculada: 3.141608
+Erro da media: 0.000501%
+
+####### Para 10000000 Pontos #######
+Para 2 Threads:
+
+Valor pi calculado: 3.142139
+Erro percentual: 0.017402%
+Tempo passado: 7.015520 segundos
+
+Para 4 Threads:
+
+Valor pi calculado: 3.142176
+Erro percentual: 0.018571%
+Tempo passado: 10.973875 segundos
+
+Para 6 Threads:
+
+Valor pi calculado: 3.142221
+Erro percentual: 0.020005%
+Tempo passado: 8.944466 segundos
+
+Para 8 Threads:
+
+Valor pi calculado: 3.141600
+Erro percentual: 0.000235%
+Tempo passado: 9.194575 segundos
+
+### Media ###
+Media calculada: 3.142034
+Erro da media: 0.014047%
+
+**** Media das medias ****
+Media: 3.142147
+Erro percentual: 0.017645%
